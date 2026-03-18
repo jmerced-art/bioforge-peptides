@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  --color-black: #080A0F;
+  --color-surface: #0E1117;
+  --color-surface2: #141820;
+  --color-border: rgba(255,255,255,0.07);
+  --color-gold: #C8A96E;
+  --color-gold-light: #E2C896;
+  --color-gold-dark: #9A7A45;
+  --color-teal: #2D8B7F;
+  --color-teal-light: #3DADA0;
+  --color-text: #EDE8DF;
+  --color-text-muted: #8A8070;
+  --color-text-dim: #4A4540;
+  --color-red: #C04A3A;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #080A0F;
+    color: #EDE8DF;
+    font-family: 'DM Mono', monospace;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+  }
+
+  ::selection {
+    background-color: rgba(200, 169, 110, 0.3);
+    color: #EDE8DF;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #080A0F;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #4A4540;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8A8070;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .font-body {
+    font-family: 'DM Mono', monospace;
+  }
+
+  .font-label {
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .btn-gold {
+    background: linear-gradient(135deg, #C8A96E, #9A7A45);
+    color: #080A0F;
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.8rem;
+  }
+
+  .btn-gold:hover {
+    background: linear-gradient(135deg, #E2C896, #C8A96E);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(200, 169, 110, 0.3);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #8A8070;
+    font-family: 'DM Mono', monospace;
+    font-weight: 400;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid rgba(255,255,255,0.07);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.8rem;
+  }
+
+  .btn-outline:hover {
+    border-color: #C8A96E;
+    color: #C8A96E;
+  }
+
+  .glass-card {
+    background: #0E1117;
+    border: 1px solid rgba(255,255,255,0.07);
+    backdrop-filter: blur(10px);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
